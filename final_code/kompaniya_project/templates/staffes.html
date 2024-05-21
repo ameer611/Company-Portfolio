@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'navbar.html'%}
+    {% load static %}    
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'staffes.css' %}?version=1">
+    <link rel="stylesheet" href="{% static 'general.css' %}?version=2">
+    <title>staffes</title>
+</head>
+    <body>
+        {% block content %}
+            <div class="container">
+                <div class="header">
+                    <h1>Our staffs</h1>
+                    <p>We are the best company in the world. We provide the best services and have the best staffs.</p>
+                </div>
+                
+                <hr>
+                
+                <div class="services">
+                    {% for staff in staffes %}
+                        <div class="service">
+                            {% if staff.staff_image %}
+                                <img src="{{ staff.staff_image.url }}" alt="image">
+                            {% endif %}
+                            <h2>{{ staff.firstname }} {{staff.lastname}}</h2>
+                            <p>{{staff.position}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endblock content %}
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'navbar.html'%}
+    {% load static %}    
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'contact.css' %}?version=1">
+    <link rel="stylesheet" href="{% static 'general.css' %}?version=2">
+    <title>contact</title>
+</head>
+<body>
+        {% block content %}
+            <div class="container">
+                <div class="header">
+                    <h1>Contact Us</h1>
+                    <p>We are the best company in the world. We provide the best services and have the best staffs.</p>
+                </div>
+                <hr>
+
+                <div class="contact">
+                    <h3>Name: {{ contacts.name }}</h3>
+                    <h4>Email: {{ contacts.email }}</h4>
+                    <h5>Phone: {{ contacts.phone }}</h5>
+                    <p>{{ contacts.message }}</p>
+                </div>
+            </div>
+        {% endblock content %}
+    
+</body>
+</html>

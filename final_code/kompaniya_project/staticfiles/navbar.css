@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #f1c40f;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fed7a5;
+    color: white;
+    padding: 10px 0;
+    
+}

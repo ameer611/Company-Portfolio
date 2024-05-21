@@ -1,0 +1,24 @@
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #fa991c;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service{
+    background-color: #2d4354;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.service img{
+    width: 80%;
+    background-color: #fa991c;
+    border-radius: 10px;
+}

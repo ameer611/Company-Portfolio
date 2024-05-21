@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '../static/home.css' %}">
+    <link rel="stylesheet" href="{% static '../static/services.css' %}">
+    <link rel="stylesheet" href="{% static '../static/staffs.css' %}">
+    <link rel="stylesheet" href="{% static '../static/contact.css' %}">
+    <link rel="stylesheet" href="{% static '../static/general.css' %}">
+    <title>Ameer Company</title>
+</head>
+<body>
+    <div class="navbars">
+        <header class="navbar">
+            <a href="{% url 'home' %}"><img src="{{logo.logo_image.url}}" alt="Logo" style="width: 70px;"></a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'staffes' %}">Staffs</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </header>    
+    </div>
+    {% block content %}
+    
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'navbar.html'%}
+{% load static %}
+
+{% block head %}
+{{block.super}}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'home.css' %}?version=1">
+    <link rel="stylesheet" href="{% static 'general.css' %}?version=2">
+    <title>home</title>
+</head>
+{% endblock head %}
+<body>
+    
+    
+    {% block content %}
+    <div class="container">
+
+        <div class="header">
+            <h1>Welcome to Ameer Company</h1>
+            <p>We are the best company in the world. We provide the best services and have the best staffs.</p>
+        </div>
+        <hr>
+
+        <div class="staffs">
+
+            <div class="staff_text">
+                <h2>Our Staffs</h2>
+                <p>Our staffs are the best in the world. They are highly trained and experienced. They are the best in their fields.</p>
+                <a href="{% url 'staffes' %}">Go to Staffs</a>
+            </div>
+            
+            
+            <img class="staff_image" src="{% static 'pictures/worker.png' %}" alt="staff_image">
+            
+
+        </div>
+
+        <div class="staffs">
+
+            <div class="staff_text">
+                <h2>Our Services</h2>
+                <p>We are the best company in the world. We provide the best services and have the best staffs.</p>
+                <a href="{% url 'services' %}">Go to Services</a>
+            </div>
+            
+            
+            <img class="staff_image" src="{% static 'pictures/rasm.png' %}" alt="staff_image">
+
+        </div>       
+        {% endblock content %}
+
+        
+
+    </div>
+
+    
+</body>
+</html>
